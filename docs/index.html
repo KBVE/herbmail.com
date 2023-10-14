@@ -8,13 +8,29 @@
 		<meta name="generator" content="Astro v2.10.15">
 		<title>Welcome to HerbMail.com</title>
 		
+
+
+
+
+    
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 		
 
 
+    
 
+			<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+		
 
-	<link rel="stylesheet" href="/_astro/index.b93770fd.css" /><script type="module" src="/_astro/page.dbf96ae3.js"></script>
+    
+			
+			
+			
+		
+		
+    
+	<link rel="stylesheet" href="/_astro/index.5cd38e6d.css" /><script type="module" src="/_astro/page.dbf96ae3.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.1 - MIT builder.io */
 !function(t,e,n,i,o,r,a,s,d,c,l,p){function u(){p||(p=1,"/"==(a=(r.lib||"/~partytown/")+(r.debug?"debug/":""))[0]&&(d=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(s=setTimeout(f,1e4),e.addEventListener("pt0",w),o?h(1):n.serviceWorker?n.serviceWorker.register(a+(r.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):f())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.style.display="block",c.style.width="0",c.style.height="0",c.style.border="0",c.style.visibility="hidden",c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.8.1":"sandbox-sw.html?"+Date.now()),e.querySelector(r.sandboxParent||"body").appendChild(c)}function f(n,o){for(w(),i==t&&(r.forward||[]).map((function(e){delete t[e.split(".")[0]]})),n=0;n<d.length;n++)(o=e.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=r.nonce,e.head.appendChild(o);c&&c.parentNode.removeChild(c)}function w(){clearTimeout(s)}r=t.partytown||{},i==t&&(r.forward||[]).map((function(e){l=t,e.split(".").map((function(e,n,i){l=l[i[n]]=n+1<i.length?"push"==i[n+1]?[]:l[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
 	<nav class="border-gray-200 bg-stone-900 bg-cover bg-blend-overlay border-b border-gray-600">
@@ -29,7 +45,7 @@
             <img class="w-8 h-8 rounded-full hover:scale-110" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="user photo">
         </button>
         
-			<button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-herbmail" id="user-menu-button" aria-expanded="false" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+			<button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-herbmail" id="user-menu-button" aria-expanded="false" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" data-drawer-backdrop="false" aria-controls="drawer-navigation">
 				<span class="sr-only">Open Drawer</span>
 				<svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" class="w-8 h-8 hover:scale-110" transform="rotate(0)">
 					<g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.384">
@@ -209,87 +225,112 @@
 				</li>
 			</ul>
 		</div>
+
+		<!-- CTA -->
+		<div id="dropdown-cta" class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900" role="alert">
+			<div class="flex items-center mb-3">
+			   <span class="bg-orange-100 text-orange-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900">Beta</span>
+			   <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-blue-50 inline-flex justify-center items-center w-6 h-6 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200 h-6 w-6 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800" data-dismiss-target="#dropdown-cta" aria-label="Close">
+				  <span class="sr-only">Close</span>
+				  <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+					 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+				  </svg>
+			   </button>
+			</div>
+			<p class="mb-3 text-sm text-blue-800 dark:text-blue-400">
+			   Preview the new Flowbite dashboard navigation! You can turn the new navigation off for a limited time in your profile.
+			</p>
+			<a class="text-sm text-blue-800 underline font-medium hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300" href="#">Turn new navigation off</a>
+		 </div>
 	</div>
 </nav>
 	
 		
 	<main class="m-auto p-4 text-white text-xl leading-normal astro-J7PV25F6">
-		
 		<p class="mb-8 p-6 rounded-lg astro-J7PV25F6">
 			Your personal ai email agent, powered by <strong class="astro-J7PV25F6">KBVE</strong>.
 			<br class="astro-J7PV25F6">
 			Wait-list is coming out soon!.
 		</p>
+
 		<ul role="list" class="grid gap-8 p-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 astro-J7PV25F6">
 			
 
 
-			<li class="link-card ease-in astro-DOHJNAO5">
-	<a href="https://docs.astro.build/" class="astro-DOHJNAO5">
-		<h2 class="astro-DOHJNAO5">
-			Documentation
-			<span class="astro-DOHJNAO5">&rarr;</span>
-		</h2>
-		<p class="astro-DOHJNAO5">
-			Learn how Astro works and explore the official API docs.
-		</p>
+<li class="link-card ease-in astro-Y3F7JQRU">
+	<a href="https://kbve.com/" class="astro-Y3F7JQRU">
+		<div class="astro-J7PV25F6">
+					<h2 class="astro-J7PV25F6">
+						This is a Tests
+						<span class="astro-J7PV25F6">&rarr;</span>
+					</h2>
+					<p class="astro-J7PV25F6">Check it out <b class="astro-J7PV25F6">here</b></p>
+				</div>
 	</a>
 </li>
-			<li class="link-card ease-in astro-DOHJNAO5">
-	<a href="https://astro.build/integrations/" class="astro-DOHJNAO5">
-		<h2 class="astro-DOHJNAO5">
-			Integrations
-			<span class="astro-DOHJNAO5">&rarr;</span>
-		</h2>
-		<p class="astro-DOHJNAO5">
-			Supercharge your project with new frameworks and libraries.
-		</p>
+
+
+
+			
+
+
+<li class="link-card ease-in astro-Y3F7JQRU">
+	<a href="https://kbve.com/" class="astro-Y3F7JQRU">
+		<div class="astro-J7PV25F6">
+					<h2 class="astro-J7PV25F6">
+						Documentations <span class="astro-J7PV25F6">&rarr;</span>
+					</h2>
+					<p class="astro-J7PV25F6">Documents!</p>
+				</div>
 	</a>
 </li>
-			<li class="link-card ease-in astro-DOHJNAO5">
-	<a href="https://astro.build/themes/" class="astro-DOHJNAO5">
-		<h2 class="astro-DOHJNAO5">
-			Themes
-			<span class="astro-DOHJNAO5">&rarr;</span>
-		</h2>
-		<p class="astro-DOHJNAO5">
-			Explore a galaxy of community-built starter themes.
-		</p>
+
+
+
+			
+
+
+<li class="link-card ease-in astro-Y3F7JQRU">
+	<a href="https://kbve.com/" class="astro-Y3F7JQRU">
+		<div class="astro-J7PV25F6"></div>
 	</a>
 </li>
-			<li class="link-card ease-in astro-DOHJNAO5">
-	<a href="https://astro.build/chat/" class="astro-DOHJNAO5">
-		<h2 class="astro-DOHJNAO5">
-			Astro Community
-			<span class="astro-DOHJNAO5">&rarr;</span>
-		</h2>
-		<p class="astro-DOHJNAO5">
-			Come say hi to our amazing Astro Discord community. ❤️
-		</p>
+
+
+
+			
+
+
+<li class="link-card ease-in astro-Y3F7JQRU">
+	<a href="https://kbve.com/" class="astro-Y3F7JQRU">
+		<div class="astro-J7PV25F6"></div>
 	</a>
 </li>
-			<li class="link-card ease-in astro-DOHJNAO5">
-	<a href="https://nx.dev/" class="astro-DOHJNAO5">
-		<h2 class="astro-DOHJNAO5">
-			Nx
-			<span class="astro-DOHJNAO5">&rarr;</span>
-		</h2>
-		<p class="astro-DOHJNAO5">
-			Learn more about Nx.
-		</p>
+
+
+
+			
+
+
+<li class="link-card ease-in astro-Y3F7JQRU">
+	<a href="https://kbve.com/" class="astro-Y3F7JQRU">
+		<div class="astro-J7PV25F6"></div>
 	</a>
 </li>
-			<li class="link-card ease-in astro-DOHJNAO5">
-	<a href="https://nrwlcommunity.slack.com/" class="astro-DOHJNAO5">
-		<h2 class="astro-DOHJNAO5">
-			Nrwl Community Slack
-			<span class="astro-DOHJNAO5">&rarr;</span>
-		</h2>
-		<p class="astro-DOHJNAO5">
-			Come chat in the Nrwl Community Slack. ❤️
-		</p>
+
+
+
+			
+
+
+<li class="link-card ease-in astro-Y3F7JQRU">
+	<a href="https://kbve.com/" class="astro-Y3F7JQRU">
+		<div class="astro-J7PV25F6"></div>
 	</a>
 </li>
+
+
+
 		</ul>
 
 		<section class="p-4 lg:p-8 dark:bg-gray-800 dark:text-gray-100 astro-J7PV25F6">
@@ -297,37 +338,114 @@
 				<div class="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row astro-J7PV25F6">
 					<img src="https://source.unsplash.com/640x480/?1" alt="" class="h-80 dark:bg-gray-500 aspect-video astro-J7PV25F6">
 					<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900 astro-J7PV25F6">
-						<span class="text-xs uppercase dark:text-gray-400 astro-J7PV25F6">Join, it's free</span>
-						<h3 class="text-3xl font-bold astro-J7PV25F6">We're not reinventing the wheel</h3>
-						<p class="my-6 dark:text-gray-400 astro-J7PV25F6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
-						<button type="button" class="self-start astro-J7PV25F6">Action</button>
+						<span class="text-xs uppercase dark:text-gray-400 astro-J7PV25F6">
+							Join, it's free
+						</span>
+
+						<h3 class="text-3xl font-bold astro-J7PV25F6">
+							We're not reinventing the wheel
+						</h3>
+						<p class="my-6 dark:text-gray-400 astro-J7PV25F6">
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Dolor aliquam possimus quas, error esse quos.
+						</p>
+						<div class="flex space-x-4 astro-J7PV25F6">
+							
+
+
+
+
+<a href="https://kbve.com/" class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
+			<span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
+			<span class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
+			<span class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+			<span class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+			<span class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
+			<span class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">
+				
+			
+			
+			
+			
+			
+			
+								KBVE
+								
+		
+		
+		
+			</span>
+		</a>
+
+
+
+							
+
+
+
+
+
+
+<a href="https://kbve.com/" class="relative rounded px-5 py-2.5 overflow-hidden group bg-green-500 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">
+	<span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease">
+	</span>
+	<span class="relative">
+		
+			
+			
+			
+			
+			
+			
+								Slide
+								
+		
+		
+		
+	</span>
+</a>
+
+						</div>
 					</div>
 				</div>
 				<div class="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse astro-J7PV25F6">
 					<img src="https://source.unsplash.com/640x480/?2" alt="" class="h-80 dark:bg-gray-500 aspect-video astro-J7PV25F6">
 					<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900 astro-J7PV25F6">
-						<span class="text-xs uppercase dark:text-gray-400 astro-J7PV25F6">Join, it's free</span>
-						<h3 class="text-3xl font-bold astro-J7PV25F6">We're not reinventing the wheel</h3>
-						<p class="my-6 dark:text-gray-400 astro-J7PV25F6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+						<span class="text-xs uppercase dark:text-gray-400 astro-J7PV25F6">
+							Join, it's free
+						</span>
+						<h3 class="text-3xl font-bold astro-J7PV25F6">
+							We're not reinventing the wheel
+						</h3>
+						<p class="my-6 dark:text-gray-400 astro-J7PV25F6">
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Dolor aliquam possimus quas, error esse quos.
+						</p>
 						<button type="button" class="self-start astro-J7PV25F6">Action</button>
 					</div>
 				</div>
 				<div class="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row astro-J7PV25F6">
 					<img src="https://source.unsplash.com/640x480/?3" alt="" class="h-80 dark:bg-gray-500 aspect-video astro-J7PV25F6">
 					<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900 astro-J7PV25F6">
-						<span class="text-xs uppercase dark:text-gray-400 astro-J7PV25F6">Join, it's free</span>
-						<h3 class="text-3xl font-bold astro-J7PV25F6">We're not reinventing the wheel</h3>
-						<p class="my-6 dark:text-gray-400 astro-J7PV25F6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+						<span class="text-xs uppercase dark:text-gray-400 astro-J7PV25F6">
+							Join, it's free
+						</span>
+						<h3 class="text-3xl font-bold astro-J7PV25F6">
+							We're not reinventing the wheel
+						</h3>
+						<p class="my-6 dark:text-gray-400 astro-J7PV25F6">
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Dolor aliquam possimus quas, error esse quos.
+						</p>
 						<button type="button" class="self-start astro-J7PV25F6">Action</button>
 					</div>
 				</div>
 			</div>
 		</section>
-		
 	</main>
 
 	<footer>
-		<div class="fixed bottom-0 left-0 z-50 w-full h-16 border-t bg-stone-900 border-gray-600 p-1">
+		<div class="fixed bottom-0 left-0 z-20 w-full h-16 border-t bg-stone-900 border-gray-600 p-1">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
         <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 hover:bg-gray-800 group">
             <svg class="w-5 h-5 mb-2 text-gray-400 group-hover:text-blue-600 group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
