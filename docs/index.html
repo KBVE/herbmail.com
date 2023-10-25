@@ -19,12 +19,12 @@
 		background-position: 0%;
 	}
 </style>
-	<link rel="stylesheet" href="/_astro/index.eec5c313.css" /><script type="module" src="/_astro/page.dbf96ae3.js"></script>
+	<link rel="stylesheet" href="/_astro/index.4af59866.css" /><script type="module" src="/_astro/page.dbf96ae3.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.1 - MIT builder.io */
 !function(t,e,n,i,o,r,a,s,d,c,l,p){function u(){p||(p=1,"/"==(a=(r.lib||"/~partytown/")+(r.debug?"debug/":""))[0]&&(d=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(s=setTimeout(f,1e4),e.addEventListener("pt0",w),o?h(1):n.serviceWorker?n.serviceWorker.register(a+(r.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):f())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.style.display="block",c.style.width="0",c.style.height="0",c.style.border="0",c.style.visibility="hidden",c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.8.1":"sandbox-sw.html?"+Date.now()),e.querySelector(r.sandboxParent||"body").appendChild(c)}function f(n,o){for(w(),i==t&&(r.forward||[]).map((function(e){delete t[e.split(".")[0]]})),n=0;n<d.length;n++)(o=e.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=r.nonce,e.head.appendChild(o);c&&c.parentNode.removeChild(c)}function w(){clearTimeout(s)}r=t.partytown||{},i==t&&(r.forward||[]).map((function(e){l=t,e.split(".").map((function(e,n,i){l=l[i[n]]=n+1<i.length?"push"==i[n+1]?[]:l[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
 
 	<body>
-		
+		<style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var d;{let p={0:t=>u(t),1:t=>l(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(l(t)),5:t=>new Set(l(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},h=t=>{let[e,n]=t;return e in p?p[e](n):void 0},l=t=>t.map(h),u=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,h(n)]));customElements.get("astro-island")||customElements.define("astro-island",(d=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=async()=>{var i;if(!this.hydrator||!this.isConnected)return;let e=(i=this.parentElement)==null?void 0:i.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),o={},a=this.querySelectorAll("template[data-astro-template]");for(let r of a){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(o[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of n){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(o[r.getAttribute("name")||"default"]=r.innerHTML)}let c;try{c=this.hasAttribute("props")?u(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",y=this.getAttribute("component-export");throw y&&(s+=` (export ${y})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}await this.hydrator(this)(this.Component,c,o,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((e,n)=>{n.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}Astro[n](async()=>{let o=this.getAttribute("renderer-url"),[a,{default:c}]=await Promise.all([import(this.getAttribute("component-url")),o?import(o):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(let r of i.split("."))this.Component=this.Component[r]}return this.hydrator=c,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},d.observedAttributes=["props"],d))}})();</script>
 	<nav class="bg-zinc-900 bg-cover bg-blend-overlay border-b border-gray-600" style="background-image: url('https://images.unsplash.com/photo-1561407958-54aa9fa49a21?auto=format&#38;fit=crop&#38;q=80&#38;w=1024&#38;h=300&#38;ixlib=rb-4.0.3&#38;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'">
 		<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 			<a href="/#" class="flex items-center">
@@ -36,48 +36,22 @@
 			
 			
 			
-			
-<button type="button" class="flex mr-3 text-sm bg-zinc-800 rounded-full md:mr-0 focus:ring-4 focus:ring-kbve" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+			<button type="button" class="flex mr-3 text-sm bg-zinc-800 rounded-full md:mr-0 focus:ring-4 focus:ring-kbve" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
 	<span class="sr-only">Open Drawer</span>
 	<img class="w-8 h-8 rounded-full hover:scale-110" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="user photo">
 </button>
 
+<!-- Dropdown menu -->
+<div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-zinc-800 divide-zinc-600" id="user-dropdown">
+	
 			
-			<div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-zinc-800 divide-zinc-600" id="user-dropdown">
-
-                
-    <div class="px-4 py-3">
-        <span class="block text-sm text-white">Guest</span>
-        <span class="block text-sm truncate text-zinc-400">
-            hi@kbve.com
-        </span>
-    </div>
-    <ul class="py-2" aria-labelledby="user-menu-button">
-        <li>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-zinc-600 text-zinc-200 hover:text-white">
-                Dashboard
-            </a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-zinc-600 text-zinc-200 hover:text-white">
-                Settings
-            </a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-zinc-600 text-zinc-200 hover:text-white">
-                Earnings
-            </a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-zinc-600 text-zinc-200 hover:text-white">
-                Sign out
-            </a>
-        </li>
-    </ul>
-
-				
-			</div>
-
+			
+			
+			
+			<astro-island uid="1m8X7w" component-url="/_astro/react-appwrite.be765369.js" component-export="ReactAppwrite" renderer-url="/_astro/client.bb1cf6b8.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;ReactAppwrite&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island>
+			
+		
+</div>
 		
 		
 			</div>
@@ -317,13 +291,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex flex-col rounded-md shadow-sm lg:flex-row">
+					<div class="flex flex-col rounded-md shadow-sm lg:flex-row clip-polygon">
 						<dotlottie-player class="object-contain h-48 lg:h-96 animate-bounce" autoplay loop mode="normal" src="/assets/json/idea.lottie"></dotlottie-player>
 						<div class="flex flex-col justify-center flex-1 p-1 md:p-6 bg-gray-900/[.45]">
 							<span class="text-xs uppercase text-gray-400 indent-48">
 								Plant Ideas.
 							</span>
-							<h3 class="text-3xl font-bold text-gradient">
+							<h3 class="text-3xl font-bold bg-custom-gradient text-transparent bg-clip-text">
 								We're not reinventing the wheel
 							</h3>
 							<p class="my-6 dark:text-gray-400">
@@ -386,7 +360,7 @@
 		<div>
 							<h2>
 								Transforming communication, mastering tasks, and
-								simplifying life. 🦆
+								simplifying life.
 							</h2>
 							<p>Explore More! <b><span>&rarr;</span></b></p>
 						</div>
