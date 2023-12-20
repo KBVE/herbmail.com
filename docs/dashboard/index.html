@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-zinc-950">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="HB Dashboard Proof of Concept">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+		<meta name="generator" content="Astro v2.10.15">
+		<title>HerbMail Dashboard</title>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+		
+<script type="module" src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
+
+		<style>
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>
+	<link rel="stylesheet" href="/_astro/dashboard.e873348a.css" /><script type="module" src="/_astro/page.dbf96ae3.js"></script>
+<script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.1 - MIT builder.io */
+!function(t,e,n,i,o,r,a,s,d,c,l,p){function u(){p||(p=1,"/"==(a=(r.lib||"/~partytown/")+(r.debug?"debug/":""))[0]&&(d=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(s=setTimeout(f,1e4),e.addEventListener("pt0",w),o?h(1):n.serviceWorker?n.serviceWorker.register(a+(r.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):f())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.style.display="block",c.style.width="0",c.style.height="0",c.style.border="0",c.style.visibility="hidden",c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.8.1":"sandbox-sw.html?"+Date.now()),e.querySelector(r.sandboxParent||"body").appendChild(c)}function f(n,o){for(w(),i==t&&(r.forward||[]).map((function(e){delete t[e.split(".")[0]]})),n=0;n<d.length;n++)(o=e.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=r.nonce,e.head.appendChild(o);c&&c.parentNode.removeChild(c)}function w(){clearTimeout(s)}r=t.partytown||{},i==t&&(r.forward||[]).map((function(e){l=t,e.split(".").map((function(e,n,i){l=l[i[n]]=n+1<i.length?"push"==i[n+1]?[]:l[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
+
+	<body>
+		<style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var d;{let p={0:t=>u(t),1:t=>l(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(l(t)),5:t=>new Set(l(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},h=t=>{let[e,n]=t;return e in p?p[e](n):void 0},l=t=>t.map(h),u=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,h(n)]));customElements.get("astro-island")||customElements.define("astro-island",(d=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=async()=>{var i;if(!this.hydrator||!this.isConnected)return;let e=(i=this.parentElement)==null?void 0:i.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),o={},a=this.querySelectorAll("template[data-astro-template]");for(let r of a){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(o[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of n){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(o[r.getAttribute("name")||"default"]=r.innerHTML)}let c;try{c=this.hasAttribute("props")?u(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",y=this.getAttribute("component-export");throw y&&(s+=` (export ${y})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}await this.hydrator(this)(this.Component,c,o,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((e,n)=>{n.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}Astro[n](async()=>{let o=this.getAttribute("renderer-url"),[a,{default:c}]=await Promise.all([import(this.getAttribute("component-url")),o?import(o):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(let r of i.split("."))this.Component=this.Component[r]}return this.hydrator=c,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},d.observedAttributes=["props"],d))}})();</script>
+	<nav class="bg-zinc-900 bg-cover bg-blend-overlay border-b border-gray-600" style="background-image: url('https://images.unsplash.com/photo-1561407958-54aa9fa49a21?auto=format&#38;fit=crop&#38;q=80&#38;w=1024&#38;h=300&#38;ixlib=rb-4.0.3&#38;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'">
+		<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+			<a href="/#" class="flex items-center">
+				<img src="/assets/img/logo.svg" class="h-8 mr-3" alt="Logo">
+			</a>
+
+			<div class="flex items-center space-x-2 md:order-2">
+				
+			
+			
+			
+			<button type="button" class="flex mr-3 text-sm bg-zinc-800 rounded-full md:mr-0 focus:ring-4 focus:ring-kbve" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+	<span class="sr-only">Open Drawer</span>
+	<img class="w-8 h-8 rounded-full hover:scale-110" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="user photo">
+</button>
+
+<!-- Dropdown menu -->
+<div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-zinc-800 divide-zinc-600" id="user-dropdown">
+
+	<astro-island uid="Z1G6t6V" component-url="/_astro/UserMenu.2ee5661f.js" component-export="default" renderer-url="/_astro/client.ef651e53.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;UserMenu&quot;,&quot;value&quot;:&quot;svelte&quot;}"></astro-island>
+	
+			
+			
+			
+		
+
+</div>
+		
+		
+			</div>
+		</div>
+	</nav>
+
+		
+	<main class="flex p-8 overflow-hidden">
+		<div class="grid gap-4 grid-flow-row-dense grid-rows-3 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-8 3xl:grid-cols-12">
+			<section class="p-4 sm:p-6 bg-gray-800 border border-gray-700 rounded-lg shadow-sm 2xl:col-span-3 text-kbve-primary transition ease-in-out hover:scale-110">
+				<div class="rounded-2xl shadow-md sm:w-[100%] bg-gray-900/[.45]">
+					<div class="flex shrink items-center justify-between p-3">
+						<div class="flex items-center space-x-2">
+							<img src="https://source.unsplash.com/50x50/?portrait" alt="" class="object-cover object-center w-8 h-8 rounded-full shadow-sm bg-gray-500 border-gray-700">
+							<div class="-space-y-1">
+								<h2 class="text-sm font-semibold leadi">
+									leroy_jenkins72
+								</h2>
+								<span class="inline-block text-xs leadi dark:text-gray-400">
+									Somewhere
+								</span>
+							</div>
+						</div>
+						<button title="Open options" type="button">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current">
+								<path d="M256,144a64,64,0,1,0-64-64A64.072,64.072,0,0,0,256,144Zm0-96a32,32,0,1,1-32,32A32.036,32.036,0,0,1,256,48Z">
+								</path>
+								<path d="M256,368a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,368Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,464Z">
+								</path>
+								<path d="M256,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,288Z">
+								</path>
+							</svg>
+						</button>
+					</div>
+					<img src="https://source.unsplash.com/301x301/?random" alt="" class="object-cover object-center w-full h-72 bg-gray-500">
+					<div class="p-3">
+						<div class="flex items-center justify-between">
+							<div class="flex items-center space-x-3">
+								<button type="button" title="Like post" class="flex items-center justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current">
+										<path d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z">
+										</path>
+									</svg>
+								</button>
+								<button type="button" title="Add a comment" class="flex items-center justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current">
+										<path d="M496,496H480a273.39,273.39,0,0,1-179.025-66.782l-16.827-14.584C274.814,415.542,265.376,416,256,416c-63.527,0-123.385-20.431-168.548-57.529C41.375,320.623,16,270.025,16,216S41.375,111.377,87.452,73.529C132.615,36.431,192.473,16,256,16S379.385,36.431,424.548,73.529C470.625,111.377,496,161.975,496,216a171.161,171.161,0,0,1-21.077,82.151,201.505,201.505,0,0,1-47.065,57.537,285.22,285.22,0,0,0,63.455,97L496,457.373ZM294.456,381.222l27.477,23.814a241.379,241.379,0,0,0,135,57.86,317.5,317.5,0,0,1-62.617-105.583v0l-4.395-12.463,9.209-7.068C440.963,305.678,464,262.429,464,216c0-92.636-93.309-168-208-168S48,123.364,48,216s93.309,168,208,168a259.114,259.114,0,0,0,31.4-1.913Z">
+										</path>
+									</svg>
+								</button>
+								<button type="button" title="Share post" class="flex items-center justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current">
+										<path d="M474.444,19.857a20.336,20.336,0,0,0-21.592-2.781L33.737,213.8v38.066l176.037,70.414L322.69,496h38.074l120.3-455.4A20.342,20.342,0,0,0,474.444,19.857ZM337.257,459.693,240.2,310.37,389.553,146.788l-23.631-21.576L215.4,290.069,70.257,232.012,443.7,56.72Z">
+										</path>
+									</svg>
+								</button>
+							</div>
+							<button type="button" title="Bookmark post" class="flex items-center justify-center">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current">
+									<path d="M424,496H388.75L256.008,381.19,123.467,496H88V16H424ZM120,48V456.667l135.992-117.8L392,456.5V48Z">
+									</path>
+								</svg>
+							</button>
+						</div>
+						<div class="flex flex-wrap items-center pt-3 pb-1">
+							<div class="flex items-center space-x-2">
+								<div class="flex -space-x-1">
+									<img alt="" class="w-5 h-5 border rounded-full dark:bg-gray-500 dark:border-gray-800" src="https://source.unsplash.com/40x40/?portrait?1">
+									<img alt="" class="w-5 h-5 border rounded-full dark:bg-gray-500 dark:border-gray-800" src="https://source.unsplash.com/40x40/?portrait?2">
+									<img alt="" class="w-5 h-5 border rounded-full dark:bg-gray-500 dark:border-gray-800" src="https://source.unsplash.com/40x40/?portrait?3">
+								</div>
+								<span class="text-sm">
+									Liked by
+									<span class="font-semibold">
+										Mamba UI
+									</span>and
+									<span class="font-semibold">86 others</span>
+								</span>
+							</div>
+						</div>
+						<div class="space-y-3">
+							<p class="text-sm">
+								<span class="text-base font-semibold">
+									leroy_jenkins72
+								</span>Nemo ea quasi debitis impedit!
+							</p>
+							<input type="text" placeholder="Add a comment..." class="w-full py-0.5 bg-transparent border-none rounded text-sm pl-0 text-gray-100">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="p-4 bg-gray-800 border border-gray-700 rounded-lg shadow-sm 2xl:col-span-2 sm:p-6 text-kbve-primary transition ease-in-out hover:scale-110">
+				<div class="p-6 rounded-md shadow-md bg-gray-900 text-gray-50">
+					<img src="https://source.unsplash.com/random/300x300/?1" alt="" class="object-cover object-center w-full rounded-md h-72 bg-gray-500">
+					<div class="mt-6 mb-2">
+						<span class="block text-xs font-medium tracki uppercase text-kbve-primary-light">
+							Quisque
+						</span>
+						<h2 class="text-xl font-semibold tracki">
+							Nam maximus purus
+						</h2>
+					</div>
+					<p class="text-gray-100">
+						Mauris et lorem at elit tristique dignissim et
+						ullamcorper elit. In sed feugiat mi. Etiam ut lacinia
+						dui.
+					</p>
+				</div>
+			</section>
+
+			<section class="p-4 bg-gray-800 border border-gray-700 rounded-lg shadow-sm 2xl:col-span-2 sm:p-6 text-kbve-primary transition ease-in-out hover:scale-110">
+				<div class="rounded-md shadow-md bg-gray-900 text-kbve-primary">
+					<img src="https://source.unsplash.com/random/300x300/?2" alt="" class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+					<div class="flex flex-col justify-between p-6 space-y-8">
+						<div class="space-y-2">
+							<h2 class="text-3xl font-semibold tracki">
+								Donec lectus leo
+							</h2>
+							<p class="text-gray-100">
+								Curabitur luctus erat nunc, sed ullamcorper erat
+								vestibulum eget.
+							</p>
+						</div>
+						<span class="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md">
+							<a href="#_" class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group" widget="button:shutter:dashboard" href="#_">
+	<span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease">
+	</span>
+	<span class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease">
+	</span>
+	<span class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease">
+	</span>
+	<span class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease">
+	</span>
+	<span class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100">
+	</span>
+	<span class="relative transition-colors duration-300 delay-200 group-hover:text-kbve-primary-light ease">
+		
+			
+			
+			
+								Read More!
+							
+		
+	</span>
+</a>
+						</span>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="p-4 bg-gray-800 border border-gray-700 rounded-lg shadow-sm 2xl:col-span-2 sm:p-6 text-kbve-primary text-kbve-primary transition ease-in-out hover:scale-110">
+				<!-- User Component -->
+				<div class="rounded-3xl overflow-hidden shadow-xl my-3 bg-kbve-primary">
+					<img src="https://i.imgur.com/dYcYQ7E.png" class="w-full">
+					<div class="flex justify-center -mt-8">
+						<img src="https://i.imgur.com/8Km9tLL.jpg" class="rounded-full border-solid border-white border-2 -mt-3">
+					</div>
+					<div class="text-center px-3 pb-6 pt-2">
+						<h3 class="text-white text-sm bold font-sans">
+							Olivia Dunham
+						</h3>
+						<p class="mt-2 font-sans font-light text-white">
+							Hello, i'm from another the other side!
+						</p>
+					</div>
+					<div class="flex justify-center pb-3 text-white">
+						<div class="text-center mr-3 border-r pr-3">
+							<h2>34</h2>
+							<span>Photos</span>
+						</div>
+						<div class="text-center">
+							<h2>42</h2>
+							<span>Friends</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="p-4 bg-gray-800 border border-gray-700 rounded-lg shadow-sm 2xl:col-span-4">
+				<!-- Inbox component -->
+				<div class="w-full bg-zinc-800 shadow-xl rounded-lg flex overflow-x-auto custom-scrollbar">
+					<div class="flex-1 px-2">
+						<div class="h-16 flex items-center justify-between">
+							<div class="flex items-center">
+								<a href="#" class="flex items-center text-gray-400 px-2 py-1 space-x-0.5 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100" title="Back">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+										<path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd">
+										</path>
+									</svg>
+									<span class="text-sm font-bold">Back</span>
+								</a>
+								<div class="flex items-center">
+									<span class="bg-gray-300 h-6 w-[.5px] mx-3">
+									</span>
+									<div class="flex items-center space-x-2">
+										<button title="Archive" class="text-gray-400 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100">
+											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20">
+												</path>
+											</svg>
+										</button>
+										<button title="Mark As Spam" class="text-gray-400 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100">
+											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+												</path>
+											</svg>
+										</button>
+										<button title="Delete" class="text-gray-400 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100">
+											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+												</path>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mb-6">
+							<h4 class="text-lg text-kbve-primary font-bold pb-2 mb-4 border-b-2">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit
+							</h4>
+							<div class="flex items-center justify-between">
+								<div class="flex items-center">
+									<img src="https://vojislavd.com/ta-template-demo/assets/img/message3.jpg" class="rounded-full w-8 h-8 border border-gray-500">
+									<div class="flex flex-col ml-2">
+										<span class="text-sm font-semibold">
+											H0lybyte
+										</span>
+										<span class="text-xs text-gray-400">
+											From: h0lybyte@herbmail.com
+										</span>
+									</div>
+								</div>
+								<span class="text-sm text-gray-500">
+									Jan 30, 2022, 10:23 AM
+								</span>
+							</div>
+							<div class="py-6 pl-2 text-kbve-primary">
+								<p>Hi John Smith!</p>
+								<p class="mt-4">
+									This is a test message!
+								</p>
+								<ul class="ml-12 list-disc">
+									<li>voluptatem accusantium</li>
+									<li>doloremque laudantium</li>
+								</ul>
+							</div>
+
+							<div class="mt-8 flex items-center space-x-4">
+								<button class="w-32 flex items-center justify-center space-x-2 py-1.5 text-gray-600 border border-gray-400 rounded-lg hover:bg-gray-200">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+										<path fill-rule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd">
+										</path>
+									</svg>
+									<span>Reply</span>
+								</button>
+								<button class="w-32 flex items-center justify-center space-x-2 py-1.5 text-gray-600 border border-gray-400 rounded-lg hover:bg-gray-200">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
+										</path>
+									</svg>
+									<span>Forward</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="p-4 bg-gray-800 border border-gray-700 rounded-lg shadow-sm sm:p-6 h-24 text-kbve-primary">
+				Test! This is section 3!!!
+			</section>
+		</div>
+	</main>
+	<script async src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+		<footer>
+			<div class="fixed bottom-0 left-0 z-20 w-full h-16 border-t bg-stone-900/75 border-gray-600 p-1 transform transition-transform ease-in-out duration-500">
+	<div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+		
+		
+			
+			
+			
+				<button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 hover:bg-gray-800 group">
+					<svg class="w-5 h-5 mb-2 text-gray-400 group-hover:text-blue-600 group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+						<path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z">
+						</path>
+					</svg>
+					<span class="text-sm text-gray-400 group-hover:text-blue-600 group-hover:text-blue-500">
+						Home
+					</span>
+				</button>
+				<button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 hover:bg-gray-800 group">
+					<svg class="w-5 h-5 mb-2 text-gray-400 group-hover:text-blue-600 group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+						<path d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z">
+						</path>
+						<path d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z">
+						</path>
+					</svg>
+					<span class="text-sm text-gray-400 group-hover:text-blue-600 group-hover:text-blue-500">
+						Wallet
+					</span>
+				</button>
+				<button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 hover:bg-gray-800 group">
+					<svg class="w-5 h-5 mb-2 text-gray-400 group-hover:text-blue-600 group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2">
+						</path>
+					</svg>
+					<span class="text-sm text-gray-400 group-hover:text-blue-600 group-hover:text-blue-500">
+						Settings
+					</span>
+				</button>
+				<button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 hover:bg-gray-800 group">
+					<svg class="w-5 h-5 mb-2 text-gray-400 group-hover:text-blue-600 group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+						<path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z">
+						</path>
+					</svg>
+					<span class="text-sm text-gray-400 group-hover:text-blue-600 group-hover:text-blue-500">
+						Profile
+					</span>
+				</button>
+			
+		
+	</div>
+</div>
+		</footer>
+		
+	</body>
+</html>
