@@ -22,7 +22,7 @@
 		background-position: 0%;
 	}
 </style>
-	<link rel="stylesheet" href="/_astro/dashboard.c7b47d72.css" /><script type="module">class n extends HTMLElement{constructor(){super();const t=this.dataset.swf;window.RufflePlayer=window.RufflePlayer||{},window.addEventListener("load",s=>{const e=window.RufflePlayer.newest().createPlayer();document.getElementById("ruffle-container")?.appendChild(e),e.load(t),e.style.width="100vw",e.style.height="100vh"})}}customElements.define("astro-ruffle",n);
+	<link rel="stylesheet" href="/_astro/dashboard.d4ee5a17.css" /><script type="module">class n extends HTMLElement{constructor(){super();const t=this.dataset.swf;window.RufflePlayer=window.RufflePlayer||{},window.addEventListener("load",s=>{const e=window.RufflePlayer.newest().createPlayer();document.getElementById("ruffle-container")?.appendChild(e),e.load(t),e.style.width="100vw",e.style.height="100vh"})}}customElements.define("astro-ruffle",n);
 </script>
 <script type="module" src="/_astro/page.dbf96ae3.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.1 - MIT builder.io */
@@ -64,37 +64,36 @@
 	</nav>
 
 		
+	<link as="fetch" id="wasm-file-link" crossorigin href="/embed/rust/rust_wasm_embed-95193d862516dded_bg.wasm" integrity="sha384-n_hlyuIXk9DEM-ZVw96lDk0gMnFmRwpysGlMWyexqBBc26RhDikl1xuJvuYwX2y-" rel="preload" type="application/wasm">
+	<link crossorigin id="wasm-js-link" href="/embed/rust/rust_wasm_embed-95193d862516dded.js" integrity="sha384-MLhzJZSLAwTm-U6WEp1HwJ1cLnRpJhkjhY7bmgmOmhlLt-ErcX3efooSdt_ZA3Gr" rel="modulepreload">
 
-	<link as="fetch" id="wasm-file-link" crossorigin href="/embed/rust/rust_wasm_embed-345c5430996d84b3_bg.wasm" integrity="sha384-fbMP2hfBLcr7hV3_EMdnFnEde35FXuwDZXj2a6S14JIQgkKP7tYFls8bey2naLr_" rel="preload" type="application/wasm">
-	<link crossorigin id="wasm-js-link" href="/embed/rust/rust_wasm_embed-345c5430996d84b3.js" integrity="sha384-rAy-EZo4HNlaraoZefpIwnIo5DOKe1OfwGlRbYviFz6t9UQ1jqb2ZxFTGjZdJcuH" rel="modulepreload">
+	<script type="module">
+		const wasmUrl = document
+			.getElementById('wasm-file-link')
+			.getAttribute('href');
+		const jsUrl = document
+			.getElementById('wasm-js-link')
+			.getAttribute('href');
 
+		try {
+			const wasmModule = await import(jsUrl);
 
-    <script type="module">
-        const wasmUrl = document.getElementById('wasm-file-link').getAttribute('href');
-        const jsUrl = document.getElementById('wasm-js-link').getAttribute('href');
+			wasmModule.default(wasmUrl);
+			window.wasmBindings = wasmModule;
+		} catch (e) {
+			console.error('Failed to load WASM module:', e);
+		}
+	</script>
 
-        try {
-            const wasmModule = await import(jsUrl);
+	<script>
+		if (`serviceWorker` in navigator && window.location.hash !== `#dev`) {
+			window.addEventListener(`load`, () => {
+				navigator.serviceWorker.register(`sw.js`);
+			});
+		}
+	</script>
 
-            wasmModule.default(wasmUrl);
-            window.wasmBindings = wasmModule;
-        } catch (e) {
-            console.error("Failed to load WASM module:", e);
-        }
-
-    </script>
-
-
-<script>
-    if (`serviceWorker` in navigator && window.location.hash !== `#dev`) {
-      window.addEventListener(`load`, (() => {
-        navigator.serviceWorker.register(`sw.js`)
-      }))
-    }
-</script>
-
-
-	<main class="md:p-96 overflow-hidden relative">
+	<main class="p-[300px] md:p-[400px] overflow-hidden relative">
 		<canvas id="the_canvas_id" class="mx-auto block absolute top-0 left-1/2 w-full" style="transform: translateX(-50%);">
 		</canvas>
 	</main>
